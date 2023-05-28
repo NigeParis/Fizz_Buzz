@@ -6,7 +6,7 @@
 /*   By: nigelrobinson <Nige@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 14:56:27 by nigelrobinson     #+#    #+#             */
-/*   Updated: 2023/05/28 15:45:12 by nigelrobinson    ###   ########.fr       */
+/*   Updated: 2023/05/28 16:19:34 by nigelrobinson    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 # define DIVISION_NBR_2 5
 
 void	ft_putchar(char c);
-void	ft_putstr(char *str);
 void	ft_putnbr(int nbr);
 bool	ft_division(int counter, int division_nbr);
 void	ft_print_to_screen_result(bool flag_fizz, bool flag_buzz, int counter);
