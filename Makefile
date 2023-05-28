@@ -1,4 +1,4 @@
-EXEC=FizzBuzz
+EXEC=fizzbuzz
 CFLAGS=-Wall -Wextra -Werror
 CC=gcc
 GAME_ENGINE=ft_fizz_buzz
