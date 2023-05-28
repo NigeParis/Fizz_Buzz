@@ -6,18 +6,28 @@
 /*   By: nigelrobinson <Nige@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 13:53:44 by nigelrobinson     #+#    #+#             */
-/*   Updated: 2023/05/28 14:54:31 by nigelrobinson    ###   ########.fr       */
+/*   Updated: 2023/05/28 15:46:24 by nigelrobinson    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+*	Header fizz Buzz Game
+*/
+
 #include "ft_fizz_buzz.h"
 
-
-
+/**
+*	DESCRITPION : Fizz Buzz main game function. Plays the game from 1 to 100
+*	With the number 3 amd 5. All are defined int the header.
+*  When divided equally by 3 prints Fizz and by 5 Buzz and both FizzBuzz
+*
+*	ARGS : nome
+*	RETURNS nothing
+*/
 
 void	ft_fizz_buzz(void)
 {
-	int	counter;
+	int		counter;
 	bool	flag_fizz;
 	bool	flag_buzz;
 
@@ -31,21 +41,24 @@ void	ft_fizz_buzz(void)
 		counter++;
 	}
 }
+
+/**
+*	DESCRIPTION : Displays one caracter on the screen stdout
+*	ARG : one char c, the caracter to be printed.
+*	RETURNS : nothing
+*/
+
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
 
-void ft_putstr(char *str)
-{
-	char c;
-	while(*str)
-	{
-		c = *str;
-		ft_putchar(c);	
-		str++;
-	}
-}
+/**
+*	DESCRIPTION : Displays on the screen a number both negative and
+*	positive.
+*	ARGS : integer number to be displayed
+*	RETURNS : nothing
+*/
 
 void	ft_putnbr(int nbr)
 {
@@ -61,30 +74,41 @@ void	ft_putnbr(int nbr)
 	ft_putchar((nbr % 10) + '0');
 }
 
+/**
+*	DESCRIPTION : Divides a number (counter) by a division number to determine
+*	the remainder. ( using the modulus operater % )
+*	ARGS : the number to be divided , the number by which to divde by.
+*	RETURN : true if divided equally and false if not.
+*/
 
 bool	ft_division(int counter, int division_nbr)
 {
-	if (counter%division_nbr == 0)
+	if (counter % division_nbr == 0)
 		return (true);
 	return (false);
 }
+
+/**
+*	DESCRIPTION : displays on the screen the number or Fizz or Buzz or both.
+*	ARGS : flags Fizz and Buzz and the number (in this case counter)
+*/
 
 void	ft_print_to_screen_result(bool flag_fizz, bool flag_buzz, int counter)
 {
 	if ((flag_fizz) && (flag_buzz))
 	{
-		ft_putstr("FizzBuzz");
-		return;
+		write(1, "FizzBuzz", 8);
+		return ;
 	}
 	if ((flag_fizz) && (!flag_buzz))
 	{
-		ft_putstr("Fizz");
-		return;
+		write(1, "Fizz", 4);
+		return ;
 	}
 	if ((!flag_fizz) && (flag_buzz))
 	{
-		ft_putstr("Buzz");
-		return;
+		write(1, "Buzz", 4);
+		return ;
 	}
 	ft_putnbr(counter);
 }
