@@ -40,4 +40,4 @@ Buzz$
 
 OUTPUT SCREEN :
 
-<img width="588" alt="Capture d’écran 2023-05-28 à 16 04 25" src="https://github.com/NigeParis/Fizz_Buzz/assets/128382762/15dbad15-b87e-4757-b8c2-bc070fc328cb">
+<img width="355" alt="Capture d’écran 2023-05-30 à 14 35 10" src="https://github.com/NigeParis/Fizz_Buzz/assets/128382762/7e1b1ee8-8885-4c0f-8236-5e2b7a061e01">
