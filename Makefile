@@ -1,24 +1,23 @@
 EXEC=fizzbuzz
-CFLAGS=-Wall -Wextra -Werror
+CFLAGS=-Wall
+CFLAGS+=-Wextra
+CFLAGS+=-Werror
 CC=gcc
-GAME_ENGINE=ft_fizz_buzz
-#GAME_INTERFACE=ft_interface
+SRC_FILE=ft_fizz_buzz
 
 .PHONY: run
 run: $(EXEC)
 	./$(EXEC)
 
-$(EXEC): main.o $(GAME_ENGINE).o #$(GAME_INTERFACE).o
+$(EXEC): main.o $(SRC_FILE).o
 	$(CC) $^ -o $(EXEC)
 
-main.o: main.c $(GAME_ENGINE).h
+main.o: main.c $(SRC_FILE).h
 	$(CC) $(CFLAGS) -c main.c
 
-$(GAME_ENGINE).o: $(GAME_ENGINE).c
-	$(CC) $(CFLAGS) -c $(GAME_ENGINE).c
+$(SRC_FILE).o: $(SRC_FILE).c
+	$(CC) $(CFLAGS) -c $(SRC_FILE).c
 
-#$(GAME_INTERFACE).o: $(GAME_INTERFACE).c
-#	$(CC) $(CFLAGS) -c $(GAME_INTERFACE).c
 
 .PHONY: clean
 clean:
